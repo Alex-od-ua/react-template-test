@@ -12,7 +12,7 @@ const MovieSearchList = ({ movies }) => {
       <Link
         className={css.link}
         state={{ from: location }}
-        to={`/movies/${id}`}
+        to={`/movies-finder/${id}`}
       >
         {title}
       </Link>
