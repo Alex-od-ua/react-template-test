@@ -35,24 +35,6 @@ const MovieSearchForm = ({ onSubmit }) => {
       </form>
     </header>
   );
-  // return (
-  //   <div className={css.Searchbar}>
-  //     <form className={css.SearchForm} onSubmit={handleSubmit}>
-  //       <input
-  //         className={css.SearchForm__input}
-  //         name="search"
-  //         value={search}
-  //         required
-  //         placeholder="Search movie"
-  //         onChange={handleChange}
-  //       />
-  //       <button type="submit" className={css.SearchForm__button}>
-  //         <FcSearch />
-  //         <span className={css.SearchForm__button__label}>Search</span>
-  //       </button>
-  //     </form>
-  //   </div>
-  // );
 };
 
 export default MovieSearchForm;
