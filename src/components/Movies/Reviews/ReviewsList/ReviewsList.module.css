@@ -1,0 +1,17 @@
+.wrapper {
+  padding: 15px;
+}
+
+.list {
+  padding: 0;
+  margin-left: 20px;
+}
+
+.item {
+  margin-bottom: 35px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 15px;
+}
