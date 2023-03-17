@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
+import { FcSearch } from 'react-icons/fc';
+
 import css from './MovieSearchForm.module.css';
 
 const MovieSearchForm = ({ onSubmit }) => {
@@ -12,22 +14,45 @@ const MovieSearchForm = ({ onSubmit }) => {
     event.preventDefault();
     onSubmit(search);
   };
-
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <input
-        name="search"
-        value={search}
-        required
-        placeholder="Search movie"
-        className={css.input}
-        onChange={handleChange}
-      />
-      <button type="submit" className={css.button}>
-        Search
-      </button>
-    </form>
+    <header className={css.Searchbar}>
+      <form className={css.SearchForm} onSubmit={handleSubmit}>
+        <button type="submit" className={css.SearchForm__button}>
+          <span className={css.SearchForm__button__label}>Search</span>
+          <FcSearch />
+        </button>
+
+        <input
+          className={css.SearchForm__input}
+          name="search"
+          type="text"
+          value={search}
+          autoComplete="off"
+          autoFocus
+          onChange={handleChange}
+          required
+        />
+      </form>
+    </header>
   );
+  // return (
+  //   <div className={css.Searchbar}>
+  //     <form className={css.SearchForm} onSubmit={handleSubmit}>
+  //       <input
+  //         className={css.SearchForm__input}
+  //         name="search"
+  //         value={search}
+  //         required
+  //         placeholder="Search movie"
+  //         onChange={handleChange}
+  //       />
+  //       <button type="submit" className={css.SearchForm__button}>
+  //         <FcSearch />
+  //         <span className={css.SearchForm__button__label}>Search</span>
+  //       </button>
+  //     </form>
+  //   </div>
+  // );
 };
 
 export default MovieSearchForm;

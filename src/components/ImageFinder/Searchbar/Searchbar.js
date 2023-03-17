@@ -38,8 +38,8 @@ export class Searchbar extends Component {
       <header className={css.Searchbar}>
         <form className={css.SearchForm} onSubmit={handleSubmit}>
           <button type="submit" className={css.SearchForm__button}>
-            <FcSearch />
             <span className={css.SearchForm__button__label}>Search</span>
+            <FcSearch />
           </button>
 
           <input
